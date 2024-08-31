@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react'
 import axios from "axios"
-// import UseGetUserId from '../hooks/UseGetUserId';
 
 function  Createrecipe () {
     // const userID = UseGetUserId();
@@ -118,6 +117,8 @@ function  Createrecipe () {
     return (
         
         <div className="create-recipe">
+        <h1 style={{  margin: '20px 0', color: '#7209b7' ,textAlign: 'center', fontSize: '3rem', 
+  marginBottom: '20px', fontWeight: 'bold', paddingBlock: '20px', borderRadius:'10px', backgroundColor:'#f5d1f3'}}>Yummy Recipes</h1>
         <h2>{editingRecipeId ? "Edit Recipe" : "Create Recipe"}</h2>
         <form onSubmit={onSubmit}>
           <label htmlFor="name">Name</label>
@@ -133,11 +134,15 @@ function  Createrecipe () {
           <textarea
             id="description"
             name="description"
-            value={recipe.name}
+            value={recipe.description}
             onChange={handleChange}
+            style={{padding:'10px', marginBottum: '10px', borderRadius:'5px'}}// inline styling
           ></textarea>
           <label htmlFor="ingredients"> Ingredients</label>
-          <button onClick={addIngredient} type='button'> Add Ingredient</button>
+          <button 
+          onClick={addIngredient} 
+          type='button'
+          style={{padding:'10px', marginBottum: '10px', borderRadius:'5px'}}> Add Ingredient</button>
          { recipe.ingredients.map((ingredient, idx) => (
             <input 
           key={idx}
@@ -151,8 +156,9 @@ function  Createrecipe () {
           <textarea
             id="instructions"
             name="instructions"
-            
+            value={recipe.instructions}
             onChange={handleChange}
+            style={{padding:'10px', marginBottum: '10px', borderRadius:'5px'}}// inline styling
           ></textarea>
           <label htmlFor="imageUrl">Image URL</label>
           <input
@@ -161,6 +167,7 @@ function  Createrecipe () {
             name="imageUrl"
             value={recipe.imageUrl}
             onChange={handleChange}
+            style={{padding:'10px', marginBottum: '10px', borderRadius:'5px'}}// inline styling
           />
           <label htmlFor="cookingTime">Cooking Time (minutes)</label>
          
@@ -170,6 +177,7 @@ function  Createrecipe () {
             name="cookingTime"
             value={recipe.cookingTime}
             onChange={handleChange}
+            style={{padding:'10px', marginBottum: '10px', borderRadius:'5px'}}// inline styling
           />
           
           <button type="submit">{editingRecipeId ? "Update Recipe" : "Create Recipe"}</button> 
