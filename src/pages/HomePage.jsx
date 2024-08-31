@@ -33,7 +33,7 @@ function HomePage() {
     <div style={styles.container}>
       {recipes.map((recipe) => (
         <div key={recipe.id} style={styles.card}>
-            <Link to={`/recipe/${recipe.id}`} style={styles.imagelink}>
+            <Link to={'/createrecipe'} style={styles.imagelink}>
           <div style={styles.imageContainer}>
             <img src={recipe.imageUrl} alt={recipe.name} style={styles.image} />
             <div style={styles.overlay}>
