@@ -1,12 +1,11 @@
 import {useState, useEffect} from 'react'
 import axios from "axios"
-import UseGetUserId from '../hooks/UseGetUserId';
+// import UseGetUserId from '../hooks/UseGetUserId';
 
 function  Createrecipe () {
     // const userID = UseGetUserId();
     const [recipes, setRecipes] = useState([]);
     const [editingRecipeId, setEdittingRecipeId] = useState(null);
-
     const [recipe, setRecipe] = useState({
         name: "",
         description: "",
@@ -17,6 +16,7 @@ function  Createrecipe () {
         // userOwner:userID,
         
       });
+      
       // Fetch all recipes 
       useEffect(() => {
         const fetchRecipes = async ()=> {
@@ -53,7 +53,7 @@ function  Createrecipe () {
         event.preventDefault();
         if (editingRecipeId){
             try{
-                await axios.put(`http://localhost:3001/recipes/${editingRecipeId}`, recipe)// mske a put req to udate the recipe
+                const response = await axios.put(`http://localhost:3001/recipes/${editingRecipeId}`, recipe)// mske a put req to udate the recipe
                 console.log(recipe.data);
                 setRecipes(recipes.map(r => r._id === editingRecipeId ? response.data : r))// update the recipes state with the updtaed recipe
                 setEdittingRecipeId(null);
@@ -115,9 +115,6 @@ function  Createrecipe () {
         setEdittingRecipeId(id);
       };
 
-
-
-
     return (
         
         <div className="create-recipe">
@@ -130,6 +127,7 @@ function  Createrecipe () {
             name="name"
            value={recipe.name}
             onChange={handleChange}
+            style={{padding:'10px', marginBottum: '10px', borderRadius:'5px'}}// inline styling
           />
           <label htmlFor="description">Description</label>
           <textarea
@@ -176,6 +174,10 @@ function  Createrecipe () {
           
           <button type="submit">{editingRecipeId ? "Update Recipe" : "Create Recipe"}</button> 
            </form>
+          
+         
+          
+
 
            
               <h2>Recipes List</h2>

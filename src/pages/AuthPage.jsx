@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from 'axios';
+import backgroundImg from '../assets/images/meal3.jpg';
 export const AuthPage = ()=> {
   return <div  className="auth">
     <Login />
@@ -7,6 +8,7 @@ export const AuthPage = ()=> {
   </div>
   
 }
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -32,6 +34,7 @@ const Login = () => {
   password={password} 
   etPassword={setPassword}
   label="Login"
+  onSubmit={onSubmit}
   />)};
   
 
@@ -60,6 +63,7 @@ alert("Registration failed. Please try again.");
   password={password}
    setPassword={setPassword}
    label="Register"
+   onSubmit={onsubmit}
    />)};
   const Form = ({username, setUsername ,password, setPassword, label, onSubmit,}) =>{
   return(
@@ -86,6 +90,9 @@ alert("Registration failed. Please try again.");
   </div>
    
   )};
+
+
+
 
 
   
