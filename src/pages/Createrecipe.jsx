@@ -184,6 +184,10 @@ function  Createrecipe () {
                     <h3>{recipe.name}</h3>
                     <p>{recipe.ingredients.join(', ')}</p>
                     <p>{recipe.cookingTime} minutes</p>
+                    {recipe.imageUrl  && (
+                        <img  src= {recipe.imageUrl} alt={recipe.name} style={{ maxwidth : "200px", marginTop: "10px" }}/>
+
+                    )}
                     <button onClick={() => startEditing(recipe._id)}>Edit</button>
                     <button onClick={() => deleteRecipe(recipe._id)}>Delete</button>
                 </div>
