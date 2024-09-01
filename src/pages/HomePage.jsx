@@ -78,6 +78,9 @@ function HomePage() {
     imageUrl: {
       width: '100%',
       height: 'auto',
+      display: 'block',
+    
+
     },
     overlay: {
       position: 'absolute',
@@ -104,8 +107,7 @@ function HomePage() {
       color: '#333',
     }}
 
-    
-          
+
     
 
 export default HomePage

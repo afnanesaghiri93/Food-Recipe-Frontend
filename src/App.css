@@ -9,7 +9,7 @@
 }
 
 
-/* Body Styling with Background Gradient */
+/* Body Styling  */
 body {
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@ body {
 }
 
 
-/* Shared Container Styling */
+/* Container Styling */
 .container {
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  width: 45%; /* Adjusted width for better layout */
+  width: 45%; 
   max-width: 500px;
   transition: transform 0.3s ease;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 
-/* Shared Input Styling */
+/*  Input Styling */
 input, textarea {
   padding: 15px;
   font-size: 18px;
@@ -67,7 +67,7 @@ input:focus, textarea:focus {
 }
 
 
-/* Shared Button Styling */
+/* Button Styling */
 button {
   padding: 15px 20px;
   background-color: #3a0ca3;
