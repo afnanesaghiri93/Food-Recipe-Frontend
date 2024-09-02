@@ -2,7 +2,7 @@ import React from 'react'
 
 function SavedRecipe() {
   return (
-    <div>About </div>
+    <div>Save your favorate recipe </div>
   )
 }
 
