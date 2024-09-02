@@ -14,5 +14,6 @@ export const Navbar = () => {
          <Link to='/authPage'>
         Login/SignUp
          </Link>
+         
     </div>
 }

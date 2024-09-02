@@ -1,10 +1,13 @@
 import { useState } from "react";
 import axios from 'axios';
-import backgroundImg from '../assets/images/meal3.jpg';
+import { useNavigate } from "react-router-dom";
+import {useCookies}  from 'react-cookie' // to set token into our cookies and to do that we have to import a hook from react cookie called useCookies
+
+
 export const AuthPage = ()=> {
   return <div  className="auth">
     <Login />
-    <SignUp />
+    <Register />
   </div>
   
 }
@@ -13,14 +16,19 @@ export const AuthPage = ()=> {
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [cookies, setCookie]= useCookies(["access_token"])
+  const navigate = useNavigate();
 
   const onSubmit = async (event) => {
     event.preventDefault();
     try{
-      await axios.post("http://localhost:3001/auth/login",{username, password});
-      const { token, userID } = response.data;
-      alert("Succesfully Logged In!")
-
+      const response = await axios.post("http://localhost:3001/auth/login",{username, password});// setthe response that we get back from API
+      
+     
+      setCookie("access_token", response.data.token, {path:'/'});
+      window.localStorage.setItem("userID", response.data.userID);
+      navigate("/");
+    
     }catch(err) {
       console.error(err)
       alert("Login failed. Please try again.");
@@ -32,14 +40,14 @@ const Login = () => {
   username={username} 
   setUsername={setUsername} 
   password={password} 
-  etPassword={setPassword}
+  setPassword={setPassword}
   label="Login"
   onSubmit={onSubmit}
   />)};
   
 
  
-const SignUp = () => {
+const Register= () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -63,21 +71,21 @@ alert("Registration failed. Please try again.");
   password={password}
    setPassword={setPassword}
    label="Register"
-   onSubmit={onsubmit}
+   onSubmit={onSubmit}
    />)};
   const Form = ({username, setUsername ,password, setPassword, label, onSubmit,}) =>{
   return(
-     <div className="auth=container">
+     <div className="auth-container">
     <form onSubmit={onSubmit}>
       <h2>{label}</h2>
-      <div className="form=group">
+      <div className="form-group">
       <label htmlFor="username"> Username :</label>
       <input 
       type="text" 
       id="username" 
       value={username} onChange={(event) =>  setUsername(event.target.value)} />
   </div>
-  <div className="form=group">
+  <div className="form-group">
       <label htmlFor="password"> Password :</label>
       <input 
       type="password" 
