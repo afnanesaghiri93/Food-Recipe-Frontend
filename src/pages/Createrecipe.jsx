@@ -117,8 +117,7 @@ function  Createrecipe () {
     return (
         
         <div className="create-recipe">
-        <h1 style={{  margin: '20px 0', color: '#7209b7' ,textAlign: 'center', fontSize: '3rem', 
-  marginBottom: '20px', fontWeight: 'bold', paddingBlock: '20px', borderRadius:'10px', backgroundColor:'#f5d1f3'}}>Yummy Recipes</h1>
+
         <h2>{editingRecipeId ? "Edit Recipe" : "Create Recipe"}</h2>
         <form onSubmit={onSubmit}>
           <label htmlFor="name">Name</label>

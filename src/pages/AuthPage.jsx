@@ -70,7 +70,7 @@ alert("Registration failed. Please try again.");
   setUsername={setUsername} 
   password={password}
    setPassword={setPassword}
-   label="Register"
+   label="SignUp"
    onSubmit={onSubmit}
    />)};
   const Form = ({username, setUsername ,password, setPassword, label, onSubmit,}) =>{

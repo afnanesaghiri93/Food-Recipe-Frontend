@@ -16,7 +16,7 @@ body {
   background: linear-gradient(135deg, #ce94cb, #2b097a);
   color: white;
   min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 
@@ -106,20 +106,24 @@ h2 {
 
 /* Navbar Styling */
 .navbar {
-  width: 150%;
+  width: 100%;
   background-color: rgba(121, 6, 156, 0.534);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: white;
+  padding: 10px 20px;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
 }
 
 
 .navbar a {
   color: white;
   text-decoration: none;
-  margin: 10px;
-  font-size: 25px;
+  margin: 0 10px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -128,6 +132,18 @@ h2 {
   text-decoration: none;
   color: #d4a5f5;
 }
+.navbar button {
+  padding: 10px 15px; 
+  background-color: #3a0ca3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+  font-size: 16px;
+  color: white;
+  margin-left: 10px; 
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
 
 
 /* Auth Page Specific Styling */
@@ -216,6 +232,15 @@ h2 {
   margin: 5px 0;
 }
 
+.navbar .logout-button{
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  width: auto;
+  margin-left: 10px;
+
+
+}
 
 
 
