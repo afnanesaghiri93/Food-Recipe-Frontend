@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 
 # Yummy Recipes
 
-Yummy Recipes is a Full-Stack web Application  desined for coooking enthusiasts using MongoDB, Express, React and Node (MERN) that allows users to explore , create and (save ) their favorite recipe. The appliction provide a friendly features user authentiction, recipe management and an interactive interface for browsing and (saving  recipes).
+Yummy Recipes is a Full-Stack web Application  designed for coooking enthusiasts built with Mern Stack using MongoDB, Express, React and Node that allows users to explore , create and (save ) their favorite recipe. The appliction provide a friendly features user authentiction, recipe management and an interactive interface for browsing and (saving  recipes).
 
 # Table of contents
 - [Features]
@@ -45,10 +45,11 @@ The project follows a standard MERN stack folder structure:
 - Node.js
 - Express.js
 - MongoDB(Mongoose)
-- JWT for authentication 
+- JWT for authentication ( JSON web Token)
 - bcrypt for password hashing
 - cors for handling cross-origin request 
 - cookies for managing session token and user authentication
+- dotenv for managing environment securely 
 
 **Frontend**
 - React
@@ -91,14 +92,17 @@ Make sure to configue the following environment variables in your `.env` file:
 
 ### Acknowledgments 
 - Data Source : This project uses  recipes from ALLRecipes website as a data source for fetching recipes  : www.allrecipes.com .
-- Tutorial Guide : I followed a Youtube tutorial by PedroTech for guidance on building this application. You can view the tutorial if you eant in this link : 
+- Tutorial Guide : I followed a Youtube tutorial by PedroTech for guidance on building this application. You can view the tutorial if you want in this link : 
 https://www.youtube.com/watch?v=P43DW3HUUH8&t=692s
 
 
 ### Saved Recipes Page: (user can save their favorite recipes to view later )  This feathure is currently under development.
  
 
-
+## Getting Started 
+Clone the repo using the web URL :
+```bash: 
+git clone https://github.com/afnanesaghiri93/Food-Recipe-Frontend.git
 
 To start run  the backend server and frontend development server: 
 ```bash : 

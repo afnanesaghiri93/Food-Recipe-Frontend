@@ -3,7 +3,7 @@ import axios from 'axios'; // Import axios , a library for making HTTP request
 import { useNavigate } from "react-router-dom";// Import the useNavigate  hook from react-router-dom for navigation
 import {useCookies}  from 'react-cookie' // to set token into our cookies and to do that we have to import a hook from react cookie called useCookies
 
-//Export the AuthPage component
+//Export the AuthPage component(ES6 module.js)
 export const AuthPage = ()=> {
   // Return div with login and Register components that renders a div with two children components:login and register
   return <div  className="auth">
