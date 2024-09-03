@@ -23,7 +23,7 @@ body {
 }
 
 
-/* Container Styling */
+/* container Styling */
 .container {
   display: flex;
   flex-direction: column;
@@ -40,14 +40,14 @@ body {
 }
 
 
-/* Hover Effect for Containers */
+/* hover effect for Containers */
 .container:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 
-/*  Input Styling */
+/*  input Styling */
 input, textarea {
   padding: 15px;
   font-size: 18px;
@@ -59,7 +59,7 @@ input, textarea {
 }
 
 
-/* Input Focus Styling */
+/* input Focus Styling */
 input:focus, textarea:focus {
   outline: none;
   border-color: #7209b7;
@@ -67,7 +67,7 @@ input:focus, textarea:focus {
 }
 
 
-/* Button Styling */
+/* button Styling */
 button {
   padding: 15px 20px;
   background-color: #3a0ca3;
@@ -81,21 +81,21 @@ button {
 }
 
 
-/* Button Hover Effect */
+/* button hover Effect */
 button:hover {
   background-color: #5e60ce;
   transform: scale(1.05);
 }
 
 
-/* Active Button Effect */
+/* active button Effect */
 button:active {
   transform: scale(0.95);
   background-color: #3a0ca3;
 }
 
 
-/* Header Styling */
+/* header styling */
 h2 {
   font-size: 26px;
   color: #7209b7;
@@ -104,7 +104,7 @@ h2 {
 }
 
 
-/* Navbar Styling */
+/* vavbar styling */
 .navbar {
   width: 100%;
   background-color: rgba(121, 6, 156, 0.534);
@@ -146,7 +146,7 @@ h2 {
 
 
 
-/* Auth Page Specific Styling */
+/* AuthPage styling */
 .auth {
   display: flex;
   justify-content: space-between;
@@ -162,7 +162,7 @@ h2 {
 }
 
 
-/* Create Recipe Page Styling */
+/* create RecipePage styling */
 .create-recipe {
   width: 80%;
   max-width: 1200px;
@@ -174,7 +174,7 @@ h2 {
 }
 
 
-/* Form Styling */
+/* form styling */
 .create-recipe form,
 .auth-container form {
   width: 100%;

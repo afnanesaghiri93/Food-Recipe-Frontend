@@ -10,16 +10,16 @@ function App() {
 
 
   return (
-    // <BrowserRouter>{/* Wrapping all routes inside BrowserRouter */}
+    // <BrowserRouter>{/* wrapping all routes inside BrowserRouter */}
    <div className="App">
           <h1 style={{  margin: '20px 0', color: '#7209b7' ,textAlign: 'center', fontSize: '3rem', 
    fontWeight: 'bold', padding: '10px 20px', borderRadius:'10px', backgroundColor:'#f5d1f3' }}>Yummy Recipes</h1>{/* Yummy recipe is the name of this web apllication  */}
-    <Navbar/> {/* Navbar component stays outside of Routes, so it appears on every page */} 
+    <Navbar/> {/* navbar component stays outside of Routes, so it appears on every page */} 
  <Routes> 
-  <Route path= "/" element= {<HomePage/>}/>{/* Home page route */}
-  <Route path= '/authpage' element={<AuthPage/>}/> {/* Authentication page route */}
-  <Route path= '/createrecipe' element={<Createrecipe/>}/> {/* Create recipe page route */}
-  <Route path= '/savedrecipe' element={<SavedRecipe/>}/> {/* Saved recipes page route */}
+  <Route path= "/" element= {<HomePage/>}/>{/* HomePage route */}
+  <Route path= '/authpage' element={<AuthPage/>}/> {/* authentication page route */}
+  <Route path= '/createrecipe' element={<Createrecipe/>}/> {/* CreateRecipe page route */}
+  <Route path= '/savedrecipe' element={<SavedRecipe/>}/> {/* SavedRecipes page route */}
   </Routes>
   
    </div>

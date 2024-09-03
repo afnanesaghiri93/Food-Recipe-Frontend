@@ -3,7 +3,7 @@ import { useCookies } from 'react-cookie';// Importing useCookies hook to manage
 export const Navbar = () => {
      // useCookies hook to manage the access token cookie
     const [cookies, setCookie]= useCookies(["access_token"]);
-     // useCookies hook to manage the access token cookie
+     // useNvigate for navigation 
     const navigate = useNavigate();
     // Logout function to clear the cookie and local storage, then navigate to the AuthPage
     const Logout = () => {
