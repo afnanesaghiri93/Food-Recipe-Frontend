@@ -22,8 +22,9 @@ export const Navbar = () => {
         Saved Recipes
          </Link>
          {/* conditional rendering based on access_token */}
+          {/* : otherwise Show Login/SignUp if not logged in */}
          {!cookies.access_token ? 
-         {/* : otherwise Show Login/SignUp if not logged in */}
+        
          (<Link to='/authPage'>Login/SignUp </Link>
          ) : (
             <>
