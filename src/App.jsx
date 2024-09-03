@@ -1,29 +1,30 @@
 
-import './App.css'
-import {BrowserRouter, Routes, Route, Router } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import SavedRecipe from './pages/SavedRecipe';
-import Createrecipe from './pages/Createrecipe';
-import { AuthPage } from './pages/authPage';
-import { Navbar } from './components/NavbarPage';
+import './App.css'// Importing global styles from an external CSS file
+import {BrowserRouter, Routes, Route, Router } from 'react-router-dom'; // Importing components from react-router-dom for routing
+import HomePage from './pages/HomePage';// Importing the HomePage component
+import SavedRecipe from './pages/SavedRecipe';// Importing the SavedRecipe component
+import Createrecipe from './pages/Createrecipe';// Importing the Createrecipe component
+import { AuthPage } from './pages/authPage';// Importing the AuthPage component
+import { Navbar } from './components/NavbarPage'; // Importing the Navbar component
 function App() {
 
 
   return (
+    // <BrowserRouter>{/* Wrapping all routes inside BrowserRouter */}
    <div className="App">
           <h1 style={{  margin: '20px 0', color: '#7209b7' ,textAlign: 'center', fontSize: '3rem', 
-   fontWeight: 'bold', padding: '10px 20px', borderRadius:'10px', backgroundColor:'#f5d1f3' }}>Yummy Recipes</h1>
-    <Navbar/>
+   fontWeight: 'bold', padding: '10px 20px', borderRadius:'10px', backgroundColor:'#f5d1f3' }}>Yummy Recipes</h1>{/* Yummy recipe is the name of this web apllication  */}
+    <Navbar/> {/* Navbar component stays outside of Routes, so it appears on every page */} 
  <Routes> 
-  <Route path= "/" element= {<HomePage/>}/>
-  <Route path= '/authpage' element={<AuthPage/>}/>
-  <Route path= '/createrecipe' element={<Createrecipe/>}/>
-  <Route path= '/savedrecipe' element={<SavedRecipe/>}/>
-  
+  <Route path= "/" element= {<HomePage/>}/>{/* Home page route */}
+  <Route path= '/authpage' element={<AuthPage/>}/> {/* Authentication page route */}
+  <Route path= '/createrecipe' element={<Createrecipe/>}/> {/* Create recipe page route */}
+  <Route path= '/savedrecipe' element={<SavedRecipe/>}/> {/* Saved recipes page route */}
   </Routes>
   
    </div>
+  //  </BrowserRouter>
   )
 }
 
-export default App
+export default App;// exporting the App component as default export
